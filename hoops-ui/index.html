@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCAA Probabilities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root{--bg:#0b0f14;--card:#0f1720;--text:#e6edf3;--muted:#9fb3c8;--accent:#5effa1}
+      *{box-sizing:border-box}
+      html,body,#root{height:100%}
+      body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+      .container{max-width:1200px;margin:0 auto;padding:24px}
+      .header{display:flex;gap:16px;align-items:center;justify-content:center;margin-bottom:24px}
+      .title{font-size:24px;font-weight:800;letter-spacing:0.2px}
+      .controls{display:flex;gap:12px;align-items:center}
+      select,button{background:#101826;color:var(--text);border:1px solid #223244;border-radius:10px;padding:10px 12px;cursor:pointer}
+      .grid{display:flex;flex-direction:column;gap:16px}
+      .table-wrap{overflow:auto;border-radius:12px}
+      .lb-table{width:100%;border-collapse:collapse}
+      .lb-table th,.lb-table td{padding:10px 12px;border-bottom:1px solid #1d2b3b}
+      .lb-table thead th{position:sticky;top:0;background:#0f1720;z-index:1;text-align:left}
+      .card{background:var(--card);border:1px solid #192635;border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,0.25)}
+      .card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #1d2b3b}
+      .card-title{font-weight:700}
+      .card-body{padding:16px}
+      .leader-row{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:10px}
+      .leader-row:hover{background:#0f1b2a}
+      .chip{font-size:12px;color:var(--muted);border:1px solid #24435a;border-radius:999px;padding:2px 8px}
+      .big{font-size:28px;font-weight:800;color:var(--accent)}
+      .muted{color:var(--muted)}
+      .list{display:flex;flex-direction:column;gap:8px}
+      .badge{font-weight:700;color:#111;background:var(--accent);padding:2px 8px;border-radius:999px}
+      .footer{margin-top:18px;font-size:12px;color:var(--muted)}
+      a{color:var(--accent);text-decoration:none}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
