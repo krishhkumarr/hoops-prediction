@@ -1,0 +1,6 @@
+.DS_Store
+hoops-main/.venv/
+*.pyc
+__pycache__/
+node_modules/
+hoops-ui/node_modules/
