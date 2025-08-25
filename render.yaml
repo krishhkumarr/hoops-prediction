@@ -1,14 +1,9 @@
 services:
   - type: web
     name: hoops-api
-    env: python
-    rootDir: hoops-main
+    env: docker
+    rootDir: .
     plan: free
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.9
-    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
-    startCommand: gunicorn api_server:api --bind 0.0.0.0:$PORT --timeout 120
     autoDeploy: true
 
 
