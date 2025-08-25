@@ -132,5 +132,15 @@ def feature_importance():
     return jsonify({"features": top.to_dict(orient='records')})
 
 
+@api.get("/")
+def root():
+    return "ok", 200
+
+
+@api.get("/api/health")
+def health():
+    return jsonify({"status": "ok"}), 200
+
+
 if __name__ == "__main__":
     api.run(host="0.0.0.0", port=8000, debug=True)
