@@ -5,7 +5,8 @@ import ModelComparison from './components/ModelComparison.jsx'
 import ConferenceChart from './components/ConferenceChart.jsx'
 import Spline from '@splinetool/react-spline'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+// Prefer build-time API URL. If not provided (e.g., Vercel rewrite), use relative base.
+const API = import.meta.env.VITE_API_URL || ''
 
 export default function App(){
   const [seasons, setSeasons] = useState([])
