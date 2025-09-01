@@ -6,7 +6,7 @@ services:
     plan: free
     autoDeploy: true
 
-  - type: static
+  - type: static_site
     name: hoops-ui
     rootDir: hoops-ui
     buildCommand: npm ci && npm run build
