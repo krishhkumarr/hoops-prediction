@@ -6,16 +6,17 @@ services:
     plan: free
     autoDeploy: true
 
-  - type: static_site
+  - type: web
     name: hoops-ui
+    env: static
     rootDir: hoops-ui
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
         fromService:
-          type: web
           name: hoops-api
+          type: web
           property: url
 
 
