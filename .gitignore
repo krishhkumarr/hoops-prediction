@@ -1,6 +1,13 @@
+# macOS
 .DS_Store
-hoops-main/.venv/
-*.pyc
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+# Node
 node_modules/
-hoops-ui/node_modules/
+dist/
+# Env
+.env
+.env.local
