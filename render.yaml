@@ -10,7 +10,7 @@ services:
     name: hoops-ui
     rootDir: hoops-ui
     buildCommand: npm ci && npm run build
-    publishPath: dist
+    staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
         fromService:
