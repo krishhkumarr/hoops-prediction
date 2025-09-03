@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "hoops-ui/package.json", "use": "@vercel/static-build", "config": { "distDir": "hoops-ui/dist" } }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "hoops-ui/$1" }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://hoops-prediction.onrender.com/api/$1" }
+  ]
+}
