@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: hoops-api
-    env: python
-    rootDir: hoops-main
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn api_server:api --bind 0.0.0.0:$PORT --timeout 120
-    autoDeploy: true

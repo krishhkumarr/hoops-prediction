@@ -6,6 +6,7 @@ from sklearn.linear_model import Ridge
 from sklearn.preprocessing import StandardScaler
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+import os
 
 CSV_PATH = "NCAA.csv"
 raw_df = pd.read_csv(CSV_PATH, encoding='latin1')
@@ -65,7 +66,12 @@ importance_df = pd.DataFrame({
 })
 
 api = Flask(__name__)
-CORS(api, resources={r"/api/*": {"origins": "*"}})
+allowed_origins_env = os.environ.get("ALLOWED_ORIGINS", "*")
+if allowed_origins_env.strip() == "*":
+    cors_origins = "*"
+else:
+    cors_origins = [o.strip() for o in allowed_origins_env.split(",") if o.strip()]
+CORS(api, resources={r"/api/*": {"origins": cors_origins}})
 
 @api.get("/api/seasons")
 def seasons():
